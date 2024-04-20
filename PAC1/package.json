@@ -2,9 +2,13 @@
   "name": "pac1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all clean parcel:dev",
+    "clean": "rimraf dist .parcel-cache",
+    "build": "npm-run-all clean parcel:build",
+    "parcel:dev": "parcel PAC1/index.html",
+    "parcel:build": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
